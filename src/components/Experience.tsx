@@ -3,25 +3,25 @@ import { motion, useInView } from 'framer-motion'
 
 const experiences = [
   {
-    icon: '💼',
-    title: 'UI/UX Designer',
-    subtitle: 'Cloud/Cloud (Start-up)',
-    description: 'Designed user interfaces, conducted user research, built wireframes and prototypes, and established design systems for a cloud-based product.',
-    date: '2024 — Present',
-  },
-  {
     icon: '🎓',
-    title: 'Bachelor of Technology — Computer Science',
-    subtitle: 'Peri College of Engineering and Technology, Chennai',
-    description: 'CGPA: 7.0. Focused on software engineering, machine learning, and data science with hands-on project experience.',
+    title: 'Bachelor of Technology — Computer Science & Engineering',
+    subtitle: 'Manakula Vinayagar Institute of Technology, Puducherry',
+    description: 'CGPA: 7.0. Focused on software engineering, machine learning, and data science with hands-on project experience. Expected graduation: Jun 2026.',
     date: '2022 — 2026',
   },
   {
     icon: '🏫',
-    title: 'Higher Secondary Education',
-    subtitle: 'Kamban Hr. Sec. School, Karanodai',
-    description: 'Secured 89% in Tamil Nadu State Board examinations.',
+    title: 'Higher Secondary Certificate (HSC)',
+    subtitle: 'Holy Flowers Higher Secondary School, Kariyamanikkam, Puducherry',
+    description: 'Secured 79% in Tamil Nadu State Board examinations.',
     date: '2022',
+  },
+  {
+    icon: '📚',
+    title: 'Secondary School Leaving Certificate (SSLC)',
+    subtitle: 'Holy Flowers Higher Secondary School, Kariyamanikkam, Puducherry',
+    description: 'Secured 71% in Tamil Nadu State Board examinations.',
+    date: '2020',
   },
 ]
 
@@ -46,7 +46,7 @@ export default function Experience() {
             Journey & <span className="font-display italic">education</span>
           </h2>
           <p className="text-sm md:text-base text-muted max-w-lg">
-            My professional path and academic background.
+            My academic background and journey.
           </p>
         </motion.div>
 

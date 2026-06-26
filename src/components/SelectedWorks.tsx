@@ -15,11 +15,11 @@ const projects = [
     reverse: false,
   },
   {
-    title: 'Sound & Music Detection System',
+    title: 'Hybrid Feature Fusion for Sound Event Detection',
     category: 'Machine Learning',
-    description: 'A Python-based ML model that detects sound and music using hybrid audio features (spectral, temporal, and mel spectrogram). Achieved 95.0% accuracy with XGBoost.',
+    description: 'Designed and implemented a hybrid feature fusion framework combining MFCC features with pretrained deep audio embeddings to improve sound event detection accuracy in autonomous vehicle environments. Developed a CNN + Bi-LSTM with Attention based deep learning model to capture both spatial and temporal audio patterns, enabling reliable detection of emergency sirens, horns, and road noise in noisy urban conditions. Optimized the trained model using quantization and pruning, and prepared it for real-time edge deployment by converting to TensorFlow Lite / ONNX, targeting low-power autonomous vehicle hardware platforms.',
     image: 'https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=800&q=80',
-    tech: ['Python', 'XGBoost', 'Librosa', 'Scikit-learn', 'NumPy'],
+    tech: ['Python', 'TensorFlow', 'OpenCV', 'FastAPI', 'SciPy', 'NumPy'],
     links: [
       { label: 'View Details', url: '#' },
     ],
