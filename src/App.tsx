@@ -1,10 +1,11 @@
-import { useState, useEffect, useCallback, useRef } from 'react'
+import { useState, useEffect, useCallback } from 'react'
 import LoadingScreen from './components/LoadingScreen'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import SelectedWorks from './components/SelectedWorks'
+import Skills from './components/Skills'
+import Experience from './components/Experience'
 import Journal from './components/Journal'
-import Explorations from './components/Explorations'
 import Stats from './components/Stats'
 import ContactFooter from './components/ContactFooter'
 
@@ -14,12 +15,12 @@ function App() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['home', 'work', 'journal', 'explorations', 'stats', 'contact']
+      const sections = ['home', 'work', 'skills', 'experience', 'journal', 'stats', 'contact']
       for (const id of sections) {
         const el = document.getElementById(id)
         if (el) {
           const rect = el.getBoundingClientRect()
-          if (rect.top <= 200 && rect.bottom >= 200) {
+          if (rect.top <= 250 && rect.bottom >= 250) {
             setActiveSection(id)
             break
           }
@@ -43,8 +44,9 @@ function App() {
       <Navbar activeSection={activeSection} onNavigate={scrollTo} />
       <Hero />
       <SelectedWorks />
+      <Skills />
+      <Experience />
       <Journal />
-      <Explorations />
       <Stats />
       <ContactFooter />
     </>

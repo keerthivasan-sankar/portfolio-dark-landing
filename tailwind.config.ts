@@ -18,6 +18,8 @@ export default {
         'text-primary': 'hsl(var(--text))',
         muted: 'hsl(var(--muted))',
         stroke: 'hsl(var(--stroke))',
+        'accent-1': '#89AACC',
+        'accent-2': '#4E85BF',
       },
       animation: {
         'scroll-down': 'scroll-down 1.5s ease-in-out infinite',

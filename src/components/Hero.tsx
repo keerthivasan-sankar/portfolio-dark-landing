@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'
 import gsap from 'gsap'
 import Hls from 'hls.js'
 
-const roles = ['Creative', 'Fullstack', 'Founder', 'Scholar']
+const roles = ['Creative', 'Fullstack', 'Developer', 'Designer']
 
 export default function Hero() {
   const videoRef = useRef<HTMLVideoElement>(null)
@@ -11,7 +11,6 @@ export default function Hero() {
   const [roleIndex, setRoleIndex] = useState(0)
   const [roleKey, setRoleKey] = useState(0)
 
-  // HLS video setup
   useEffect(() => {
     const video = videoRef.current
     if (!video) return
@@ -34,7 +33,6 @@ export default function Hero() {
     }
   }, [])
 
-  // Role cycling
   useEffect(() => {
     const interval = setInterval(() => {
       setRoleIndex((prev) => {
@@ -42,11 +40,10 @@ export default function Hero() {
         setRoleKey((k) => k + 1)
         return next
       })
-    }, 2000)
+    }, 2500)
     return () => clearInterval(interval)
   }, [])
 
-  // GSAP entrance
   useEffect(() => {
     const ctx = gsap.context(() => {
       gsap.from('.name-reveal', {
@@ -80,7 +77,6 @@ export default function Hero() {
       ref={containerRef}
       className="relative min-h-screen flex items-center justify-center overflow-hidden"
     >
-      {/* Background video */}
       <div className="absolute inset-0 overflow-hidden">
         <video
           ref={videoRef}
@@ -94,7 +90,6 @@ export default function Hero() {
         <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-bg to-transparent" />
       </div>
 
-      {/* Hero content */}
       <div className="relative z-10 text-center px-6 max-w-4xl mx-auto pt-24">
         <motion.p
           className="blur-in text-xs text-muted uppercase tracking-[0.3em] mb-8"
@@ -111,15 +106,15 @@ export default function Hero() {
           A{' '}
           <span
             key={roleKey}
-            className="font-display italic text-text-primary animate-role-fade-in inline-block"
+            className="font-display italic text-accent-1 animate-role-fade-in inline-block"
           >
             {roles[roleIndex]}
           </span>{' '}
-          lives in Puducherry.
+          developer lives in Puducherry.
         </p>
 
         <p className="blur-in text-sm md:text-base text-muted max-w-md mx-auto mb-12">
-          Designing seamless digital interactions by focusing on the unique nuances which bring systems to life.
+          Aspiring Software Engineer & Data Scientist with hands-on experience in full-stack development, machine learning, and UI/UX design. Passionate about building scalable solutions.
         </p>
 
         <div className="blur-in inline-flex gap-4">
@@ -138,7 +133,6 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Scroll indicator */}
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-3">
         <span className="text-xs text-muted uppercase tracking-[0.2em]">Scroll</span>
         <div className="relative w-px h-10 bg-stroke overflow-hidden">
