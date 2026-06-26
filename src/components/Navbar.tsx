@@ -64,15 +64,15 @@ export default function Navbar({ activeSection, onNavigate }: NavbarProps) {
 
         <div className="hidden sm:block w-px h-5 bg-stroke mx-1" />
 
-        <button
-          onClick={() => onNavigate('contact')}
+        <a
+          href="mailto:kkeerthivasan811@gmail.com"
           className="relative text-xs sm:text-sm rounded-full px-3 sm:px-4 py-1.5 sm:py-2 group"
         >
           <span className="absolute inset-[-2px] rounded-full accent-gradient opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
           <span className="relative flex items-center gap-1 bg-surface rounded-full backdrop-blur-md px-3 py-1.5 text-text-primary">
             Say hi <span className="text-xs">↗</span>
           </span>
-        </button>
+        </a>
       </motion.div>
     </div>
   )

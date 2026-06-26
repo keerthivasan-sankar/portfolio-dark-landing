@@ -9,7 +9,7 @@ const projects = [
     image: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&q=80',
     tech: ['HTML', 'CSS', 'JavaScript', 'Responsive Design'],
     links: [
-      { label: 'Live Demo', url: 'https://keerthivasan-sankar.github.io/exam-buddy/' },
+      { label: 'Live Demo', url: 'https://exambuddy-frontend-8p5t.vercel.app/' },
       { label: 'GitHub', url: 'https://github.com/keerthivasan-sankar/exam-buddy' },
     ],
     reverse: false,
